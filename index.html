@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit | Personal Portfolio & Courses</title>
+    <meta name="description" content="Ankit's Portfolio - Web Developer, Designer, Editor. Premium courses and professional services available.">
+    <meta name="keywords" content="web developer, designer, video editor, courses, portfolio">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="circular-loader"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="switch">
+            <span class="slider">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+            </span>
+        </label>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.svg" alt="Ankit Logo" class="logo-img">
+                <span>Ankit</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="assets/profile.png" alt="Ankit Profile" class="profile-img">
+                    <div class="profile-ring"></div>
+                </div>
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="highlight">Ankit</span>
+            </h1>
+            <div class="typing-container">
+                <span id="typing-text" class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Crafting digital experiences with passion and precision. 
+                Transforming ideas into stunning web solutions.
+            </p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">
+                    <i class="fas fa-eye"></i>
+                    View Projects
+                </a>
+                <a href="courses.html" class="btn btn-secondary">
+                    <i class="fas fa-graduation-cap"></i>
+                    Buy Courses
+                </a>
+                <a href="contact.html" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i>
+                    Contact Me
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about creating digital excellence</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a creative web developer and designer with a passion for crafting 
+                        exceptional digital experiences. With expertise in modern web technologies 
+                        and design principles, I help businesses and individuals bring their 
+                        visions to life.
+                    </p>
+                    <div class="stats" style="animation-play-state: running;">
+                        <div class="stat" style="animation-play-state: running;">
+                            <h3 class="counter" data-target="50" style="animation-play-state: running;">\</h3>
+                            <p style="animation-play-state: running;">Projects Completed</p>
+                        </div>
+                        <div class="stat" style="animation-play-state: running;">
+                            <h3 class="counter" data-target="75" style="animation-play-state: running;">0</h3>
+                            <p style="animation-play-state: running;">Happy Clients</p>
+                        </div>
+                        <div class="stat" style="animation-play-state: running;">
+                            <h3 class="counter" data-target="3" style="animation-play-state: running;">0</h3>
+                            <p style="animation-play-state: running;">Years Experience</p>
+                        </div>
+                    </div>
+                <div class="about-skills">
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>Web Development</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>Video Editing</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>Graphic Design</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Ankit</h3>
+                <p>Creating digital excellence through innovative design and development.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ankit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
