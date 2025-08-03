@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ankit Portfolio</title>
+    <meta name="description" content="Get in touch with Ankit for your web development, design, and video editing projects.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="switch">
+            <span class="slider">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+            </span>
+        </label>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.svg" alt="Ankit Logo" class="logo-img">
+                <span>Ankit</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">Let's discuss your next project and bring your ideas to life</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Let's Connect</h2>
+                    <p>Ready to start your project? Have questions about my services or courses? I'd love to hear from you!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Email</h4>
+                                <p>crazyankit@gmail.com</p>
+                                <small>Response within 24 hours</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>WhatsApp</h4>
+                                <p>+91 9672053133</p>
+                                <small>Available 9 AM - 6 PM IST</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Location</h4>
+                                <p>Mumbai, Maharashtra</p>
+                                <small>India</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-connect">
+                        <h3>Follow Me</h3>
+                        <div class="social-links-large">
+                            <a href="#" class="social-link instagram" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-link github" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="social-link youtube" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <h2>Send Message</h2>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="form-error" id="name-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                            <span class="form-error" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="video-editing">Video Editing</option>
+                                <option value="graphic-design">Graphic Design</option>
+                                <option value="seo">SEO Optimization</option>
+                                <option value="mobile-app">Mobile App Design</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="courses">Course Purchase</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Project Budget (Optional)</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-10k">Under ₹10,000</option>
+                                <option value="10k-25k">₹10,000 - ₹25,000</option>
+                                <option value="25k-50k">₹25,000 - ₹50,000</option>
+                                <option value="50k-100k">₹50,000 - ₹1,00,000</option>
+                                <option value="above-100k">Above ₹1,00,000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me more about your project requirements, timeline, and any specific details..." required></textarea>
+                            <span class="form-error" id="message-error"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to newsletter for tips and updates
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How long does a typical project take?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary based on complexity. A simple website takes 1-2 weeks, while complex applications may take 4-8 weeks. I'll provide a detailed timeline during our initial consultation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you provide ongoing support after project completion?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! I offer 30 days of free support after project delivery. Extended support and maintenance packages are also available.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What's included in your courses?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>My courses include comprehensive tutorials, premium assets, templates, and lifetime access. You'll also get certificate of completion and ongoing support.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you work with international clients?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! I work with clients worldwide. I'm flexible with time zones and use modern communication tools to ensure smooth collaboration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Ankit</h3>
+                <p>Creating digital excellence through innovative design and development.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ankit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
