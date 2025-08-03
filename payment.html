@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Ankit Portfolio</title>
+    <meta name="description" content="Secure payment page for Ankit's courses with multiple payment options.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="switch">
+            <span class="slider">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+            </span>
+        </label>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.svg" alt="Ankit Logo" class="logo-img">
+                <span>Ankit</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-container">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="order-item">
+                        <div class="item-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="item-details">
+                            <h3 id="course-title">Video Editing Pack (20GB)</h3>
+                            <p>Complete video editing course with premium assets</p>
+                            <div class="item-features">
+                                <span><i class="fas fa-check"></i> 50+ Video Tutorials</span>
+                                <span><i class="fas fa-check"></i> 20GB Premium Assets</span>
+                                <span><i class="fas fa-check"></i> Lifetime Access</span>
+                                <span><i class="fas fa-check"></i> Certificate of Completion</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-total">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">₹1,999</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Discount:</span>
+                            <span class="discount">-₹1,000</span>
+                        </div>
+                        <div class="total-row total-final">
+                            <span>Total:</span>
+                            <span id="total-amount">₹1,999</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="payment-methods">
+                    <h2>Choose Payment Method</h2>
+                    
+                    <!-- UPI Section -->
+                    <div class="payment-option active" data-method="upi">
+                        <div class="payment-header">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>UPI Payment</span>
+                            <div class="recommended-badge">Recommended</div>
+                        </div>
+                        <div class="payment-content">
+                            <div class="upi-options">
+                                <div class="upi-qr">
+                                    <div class="qr-code-container">
+    <img src="assets/new-upi-qr.jpg" alt="UPI QR Code" class="upi-qr-image-custom">
+    <small>Scan with any UPI app</small>
+</div>
+
+                                    <div class="upi-id">
+                                        <label>UPI ID:</label>
+                                        <div class="upi-id-input">
+                                            <input type="text" value="9672053133@ibl" readonly>
+                                            <button class="copy-btn" onclick="copyUPIId()">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="upi-apps">
+                                    <h4></h4>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Payment Verification -->
+                    <div class="payment-verification">
+                        <h3>Payment Verification</h3>
+                        <p>After making the payment, please upload a screenshot for verification:</p>
+                        <div class="upload-section">
+                            <input type="file" id="payment-screenshot" accept="image/*" onchange="handleFileUpload(event)">
+                            <label for="payment-screenshot" class="upload-btn">
+                                <i class="fas fa-camera"></i>
+                                Upload Payment Screenshot
+                            </label>
+                            <div id="upload-preview" class="upload-preview"></div>
+                        </div>
+                        <div class="contact-info">
+                            <p><strong>For instant access, send payment screenshot to:</strong></p>
+                            <div class="contact-methods">
+                                <a href="https://wa.me/919672053133" class="contact-btn whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    WhatsApp: +91 9672 053 133
+                                </a>
+                                <a href="mailto:crazyankit@gmail.com" class="contact-btn email">
+                                    <i class="fas fa-envelope"></i>
+                                    Email: crazyankit@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Complete Payment Button -->
+                    <button class="btn btn-success btn-large btn-full" onclick="completePayment()">
+                        <i class="fas fa-check-circle"></i>
+                        Confirm Payment & Get Access
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Success Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Payment Submitted Successfully!</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <p>Your payment has been submitted for verification. You will receive course access within 2-4 hours.</p>
+                <div class="next-steps">
+                    <h4>What happens next?</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> We'll verify your payment</li>
+                        <li><i class="fas fa-check"></i> Course access will be sent to your email</li>
+                        <li><i class="fas fa-check"></i> You'll receive download links</li>
+                        <li><i class="fas fa-check"></i> 24/7 support available</li>
+                    </ul>
+                </div>
+                <div class="modal-actions">
+                    <a href="courses.html" class="btn btn-primary">Browse More Courses</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Ankit</h3>
+                <p>Creating digital excellence through innovative design and development.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ankit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
